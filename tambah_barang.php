@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data yang dikirimkan melalui form tambah, dengan pengecekan isset untuk menghindari notice
     $id_barang = isset($_POST['id_barang']) ? $_POST['id_barang'] : $id_barang_baru;
     $nama_barang = isset($_POST['nama_barang']) ? $_POST['nama_barang'] : "";
-    // $stok = isset($_POST['stok']) ? $_POST['stok'] : "";
+    $stok = isset($_POST['stok']) ? $_POST['stok'] : "";
     $harga_beli = isset($_POST['harga_beli']) ? $_POST['harga_beli'] : "";
     $harga_jual = isset($_POST['harga_jual']) ? $_POST['harga_jual'] : "";
 
@@ -221,10 +221,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Nama Barang</label>
                 <input type="text" name="nama_barang" class="form-control" required>
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <label>Stok</label>
                 <input type="number" name="stok" class="form-control" required>
-            </div> -->
+            </div>
             <div class="form-group">
                 <label>Harga Beli</label>
                 <input type="text" name="harga_beli" class="form-control" required>
